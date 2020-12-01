@@ -1,0 +1,61 @@
+# Download this file using PowerShell v3 under Windows with the following comand
+# Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
+
+# this file shall be included
+!.gitignore
+!app.config
+!web.config
+
+Settings.StyleCop
+*.dotsettings.user
+
+# Visual Studio cache folder
+.vs/
+
+
+# archive
+*.7z
+*.zip
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+*[Bb]in/
+[Oo]bj/
+*.pdb
+
+
+# other unwanted folders
+node_modules/
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+*.csproj.log
+
+# Test files
+*.vsmdi
+*.vspx
+
+# log files
+*.log
+
+# NuGet Packages -> These must be kept for now!
+# *.nupkg
+
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+**/NugetPackages/*
+
+$(ProjectDir)bin
+[Nn]u[Gg]et.exe
+
+# Resharper cache
+_ReSharper.Caches
+
+*.pubxml.user
+
+*.dbmdl
+*.userprefs
