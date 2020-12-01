@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DfwRest.Domain\DfwRest.Domain.csproj" />
+    <ProjectReference Include="..\DfwRest.Repo\DfwRest.Repo.csproj" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,33 @@
+<div class="row padding-l-r">
+  <div class="col-12 text-center text-primary">
+    <h1>Dejans test app</h1>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="row padding-l-r">
+  <div class="col-4">
+    <h4 class="text-secondary">Data from File:</h4>
+    <textarea class="windt100 rounded" [(ngModel)]="textFromFile.text" rows="10" disabled></textarea>
+    <h4 class="text-secondary padding-t">Number of words: {{textFromFile.numberOfWords}}</h4>
+  </div>
+  <div class="col-4">
+    <h4 class="text-secondary">Data from Db:</h4>
+    <textarea class="windt100 rounded" [(ngModel)]="textFromDb.text" rows="10" disabled></textarea>
+    <h4 class="text-secondary padding-t">Number of words: {{textFromDb.numberOfWords}}</h4>
+  </div>
+  <div class="col-4" *ngIf="userEnteredText">
+    <h4 class="text-secondary">User entered data:</h4>
+    <textarea class="windt100 rounded" [(ngModel)]="userEnteredText.text" rows="10" placeholder="Please enter some text"></textarea>
+    <div class="row">
+      <div class="col-5">
+        <button [disabled]="!userEnteredText.text" type="button" class="btn btn-info" (click)="calculateNumberOfWords(userEnteredText)">Calculate number of Words</button>
+      </div>
+      <div class="col-6">
+        <h4 class="text-secondary padding-t clear-lh">Number of words: {{userEnteredText.numberOfWords}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
